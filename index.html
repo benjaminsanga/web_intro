@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & JS</title>
+  <style>
+    h1 {
+      color: midnightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Some content and functionality</h1>
+  <p>Just adding some extra text</p>
+
+  <input type="text" placeholder="Enter your name" id="name">
+  <button id="submit" onclick="doThisOnSubmit()">Submit</button>
+  <ul>
+    
+  </ul>
+
+  <script>
+    function doThisOnSubmit() {      
+      const input_name = document.getElementById("name").value;      
+      const ul = document.getElementsByTagName('ul')[0];
+      const li = document.createElement('li');
+      const node = document.createTextNode(input_name);
+      li.appendChild(node);
+      ul.appendChild(li);
+      
+      document.getElementById('name').value = "";
+    }
+  </script>
+</body>
+</html>
